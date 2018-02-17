@@ -1,11 +1,11 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
+let express = require('express');
+let path = require('path');
+let favicon = require('serve-favicon');
+let logger = require('morgan');
+let bodyParser = require('body-parser');
 
-var api = require('./routes/api');
-var app = express();
+let api = require('./routes/api');
+let app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -16,7 +16,7 @@ app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
