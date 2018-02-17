@@ -1,1 +1,9 @@
 #!/use/bin/env node
+
+/* Module Dep. */
+
+let app = require('../app');
+let debug = require('debug')('mean-streams:server');
+let http = require('http');
+
+/* Get Port */
